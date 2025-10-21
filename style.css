@@ -1,0 +1,190 @@
+body{
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --firstcolor : #33FF00;
+    --secondary : #e98227;
+    --lightTheme : #e8e6e3;
+    --darkTheme : #000000;
+    --lightGrey : #313436;
+    --hover-color : rgb(119, 9, 222);
+}
+
+.image{
+   
+    width: 60%;
+    height: 100vh;
+    position: relative;
+}
+img{
+    width: 50px;
+    height: 50px;
+    margin: 15px;
+}
+.logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+   
+    
+}
+.logo > a {
+    display: inline-block;
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-family: 'logoFont';
+    background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.video{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: 100%;
+    z-index: -1;
+}
+.footerr{
+    position:absolute;
+    bottom: 0px;
+    left: 10px;
+    font-size: 20px;
+}
+.footerr > p > a{
+    text-decoration: none;
+    color: #33FF00
+}
+.content{
+    width: 40%;
+    height: 100vh;
+    background-color: var(--darkTheme);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content > .formLayout{
+    width: 70%;
+    height: auto;
+    border: 2px solid var(--firstcolor);
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    /* padding: 10px; */
+
+}
+
+@font-face {
+    font-family: 'Gamesfont';
+    src: url(./space-nova-font/SpaceNova-6Rpd1.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'logoFont';
+    src: url(./Norse-Bold.otf) format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.formLayout > *{
+    width: 100%;
+    
+    font-family: 'Gamesfont';
+    text-align: left;
+    margin-left: 10px;
+    color: var(--firstcolor);
+}
+.mainHeading{
+    text-align: center;
+    margin-left: 10px;
+    /* background-color: red; */
+    font-size: 45px;
+    display: flex;
+    gap:30px;
+    height: auto;
+} 
+.mainHeading:hover{
+    color: var(--hover-color);
+}
+.mainHeading > p{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.belowMainHeading{
+    font-size: 16px;
+}
+.form{
+    margin-top: 10px;
+    
+    
+}
+.label{
+    display: block;
+    margin-bottom: 13px;
+}
+
+.fontSmall{
+    font-size: 14px;
+}
+
+input{
+    height: 20px;
+    width: 80%;
+    border-style: solid;
+    border-color: var(--firstcolor);
+    border-radius: 5px;
+    background-color: var(--darkTheme);
+    margin-bottom: 5px;
+    color: white;
+}
+input:focus{
+    border-style: solid;
+    border-color: var(--secondary);
+    outline: none;
+}
+
+.button{
+  
+  background: none;      
+  border: 1px solid grey;          
+  padding: 5px;            
+  margin: 0; 
+  margin-right: 20px;            
+  font-family: "Gamesfont";
+  color: var(--firstcolor);
+  cursor: pointer;       
+  outline: none;    
+  font-size: 18px; 
+  
+
+}
+.button:hover{
+    color: var(--hover-color);
+    border: 1px solid var(--hover-color);
+}
+
+.bottom{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    
+}
+.bottom > p{
+    font-size: 12px;
+    margin-right: 20px;
+}
+
+.bottom > p > a{
+    color: white;
+}
+.bottom > p > a:hover{
+    color: var(--hover-color);
+}
