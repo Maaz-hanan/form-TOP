@@ -13,6 +13,14 @@ body{
     --hover-color : rgb(119, 9, 222);
 }
 
+.lightmode{
+    --firstcolor: #e8e6e3;
+    --hover-color: #e98227;
+    --darkTheme : #313436;
+    filter: brightness(1.5) saturate(1.2);
+}
+
+
 .image{
    
     width: 60%;
@@ -48,6 +56,7 @@ img{
     object-fit: cover;
     object-position: 100%;
     z-index: -1;
+    filter: brightness(0.7) saturate(1.5);
 }
 .footerr{
     position:absolute;
@@ -60,6 +69,7 @@ img{
     color: #33FF00
 }
 .content{
+    position: relative;
     width: 40%;
     height: 100vh;
     background-color: var(--darkTheme);
@@ -67,6 +77,18 @@ img{
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
+    
+}
+.theme{
+    align-self: flex-end;
+    margin-right: 40px;
+    position: absolute;
+    top: 50px;
+    right: 30px;
+}
+.content > .theme > img{
+    filter: invert(100%);
 }
 
 .content > .formLayout{
@@ -77,6 +99,7 @@ img{
     display: flex;
     flex-direction: column;
     /* padding: 10px; */
+    flex-wrap: wrap;
 
 }
 
@@ -104,10 +127,12 @@ img{
     text-align: center;
     margin-left: 10px;
     /* background-color: red; */
+    flex-wrap: wrap;
     font-size: 45px;
     display: flex;
     gap:30px;
     height: auto;
+    
 } 
 .mainHeading:hover{
     color: var(--hover-color);
@@ -146,8 +171,15 @@ input{
 }
 input:focus{
     border-style: solid;
-    border-color: var(--secondary);
+    border-color: var(--hover-color);
     outline: none;
+}
+
+input:valid{
+    border: 1px solid #33FF00;
+}
+input:user-invalid:not(:focus):not(:placeholder-shown) {
+  border: 1px solid red;
 }
 
 .button{
